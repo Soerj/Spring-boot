@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Convertation result for date:  {{date}}</title>
+</head>
+<body>
+	<form method="post">
+
+		<select name="fromValute">
+		{{#valutes}}
+		    <option value="{{id}}" >{{name}}</option>
+		{{/valutes}}
+		</select>
+		<input type="text" name = "quantity" placeholder="quantity" {{#quantity}}value="{{quantity}}"{{/quantity}}>
+
+		<select name="toValute">
+		{{#valutes}}
+		    <option value="{{id}}" >{{name}}</option>
+		{{/valutes}}
+		</select>
+		
+		<input type="date" name = "date">
+		<button type="submit">calculate</button>
+
+	</form>
+	
+	{{#result}}
+	<h3>Convertation result</h3>
+	<div>
+		<b>{{quantity}}</b>	<span> {{fromValute.charCode}} = </span> <b>{{result}} </b> <span>{{toValute.charCode}} on date: </span>
+		<i>{{date}}</i>
+	</div>
+	{{/result}}
+	
+	{{#notEmpty}}
+	<h3>Convertation history</h3>
+	{{/notEmpty}}
+	
+	{{#convertations}}
+	<div>
+		<i>Exchange rates date: {{date}}</i>
+		<b>|| {{quantity}} </b>
+		<label>{{charCodeFrom}} = </label>
+		<b>{{result}} </b>
+		<label>{{charCodeTo}}</label>
+	</div>
+	{{/convertations}}
+	
+</body>
+</html>

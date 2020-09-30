@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<binding>
+	<format type="double" serializer="com.currency.app.entity.formatter.DoubleFormatter.toString" deserializer="com.currency.app.entity.formatter.DoubleFormatter.toDouble"/>
+	<format type="java.time.LocalDate" serializer="com.currency.app.entity.formatter.LocalDateFormatter.toString" deserializer="com.currency.app.entity.formatter.LocalDateFormatter.toLocalDate"/>
+	<mapping name ="ValCurs" class = "com.currency.app.entity.ValCurs" ordered = "false">
+		<value style = "attribute" name = "Date" field = "date" />
+		<value style = "attribute" name = "name" field = "name" />
+		
+		<collection field = "valutes" type = "java.util.ArrayList">
+			<structure name = "Valute" type = "com.currency.app.entity.Valute">
+				<value style = "attribute" name = "ID" field = "id" />
+				<value name = "NumCode" field = "numCode" />
+				<value name="CharCode" field="charCode" />
+				<value name="Nominal" field="nominal" />
+				<value name="Name" field="name" />
+				<value name="Value" field="value" />
+			</structure>
+		</collection>
+		
+	</mapping>
+</binding>

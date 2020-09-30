@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Convertation history</title>
+</head>
+<body>
+	<form method="post">
+
+		{{#notEmpty}}
+		<h3>Convertation history</h3>
+		{{/notEmpty}}
+		
+		{{#convertations}}
+		<div>
+			<i>Exchange rates date: {{date}}</i>
+			<b>|| {{quantity}} </b>
+			<label>{{charCodeFrom}} = </label>
+			<b>{{result}} </b>
+			<label>{{charCodeTo}}</label>
+		</div>
+		{{/convertations}}
+	</form>
+	
+	
+</body>
+</html>
