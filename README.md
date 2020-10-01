@@ -17,7 +17,10 @@ Spring-boot currency converter app
 
   2. Собрать проект, используя pom.xml.
   3. Отдельно запустить jibx компилятор, используя maven-jibx-plugin, чтобы скомпилировать xml биндинги.
-
+  
+<h3>Схема приложения</h3>
 ![alt text](https://i.ibb.co/PrgY7RN/image.jpg)
+
+<h3>Пример результатов работы приложения</h3>
 ![alt text](https://i.ibb.co/C05wmxd/front.jpg)
 
